@@ -7,7 +7,8 @@ public static void main(String[] args)
 {
 	try
 	{
-		Socket s=new Socket("localhost",1000);
+		InetAddress ip=InetAddress.getLocalHost();
+        Socket s=new Socket(ip.getHostName(),1000);
 		DataOutputStream out =new DataOutputStream(s.getOutputStream());
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the request message");
