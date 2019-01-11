@@ -1,0 +1,77 @@
+body{
+	background-color:#ffffff;
+	background-size:cover;
+}
+a{
+	color:blue;
+	text-align:justify;
+	padding-left:40%;
+	padding-right:40%;
+	padding-top:2%;
+	padding-bottom:2%;
+	font-size:150%;
+	padding:0;
+}
+h1{
+	color:black;
+	text-align:center;
+	font-size:350%;
+	padding:0;
+}
+p{
+	color:black;
+	text-align:center;
+	font-size:150%;
+	padding:0;
+}
+p.link{
+	color:black;
+	text-align:center;
+	font-size:10px;
+	padding:0;
+}
+h2{
+	color:black;
+	text-align:center;
+	font-size:300%;
+	padding:0;
+}
+h3{
+	color:black;
+	text-align:center;
+	font-size:200%;
+	padding:0;
+}
+p.profile{
+	box-sizing:border-box;
+	border:2px solid green;
+ 	color:red;
+    text-align:justify;
+	font-size:25px;
+	padding-left:30%;
+	padding-top:2%;
+	padding-bottom:2%;
+	padding-right:30%;
+}
+p.education {
+    color:black;
+	font-size:25px;
+	text-align:justify;
+	padding-left:30%
+	
+}
+
+p.hobbies {
+    color:black;
+	font-size:25px;
+	text-align:justify;
+	padding-left:30%
+	
+}
+p.inspirations {
+    color:red;
+	font-size:25px;
+	text-align:justify;
+	padding-left:30%
+	
+}

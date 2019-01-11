@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="shipping.xsl" ?>
+<shiporder orderid="889923"
+  xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+  xsl:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson> Kylian Mbappe </orderperson>
+  <shipto>
+    <name> Neymar Jr. </name>
+	<address> PSG office,Paris </address>
+	<city>Paris</city>
+	<country>France</country>
+  </shipto>
+  <item>
+  <title>Football Shoes</title>
+  <note>Keep it safe bro Its a mercurial editon Nike premier boot</note>
+  <quantity>1</quantity>
+  <price>$190.22</price>
+  </item>  
+  <item>
+  <title>Christmas Gift</title>
+  <note>Open it in midnight</note>
+  <quantity>1</quantity>
+  </item>
+ </shiporder>
