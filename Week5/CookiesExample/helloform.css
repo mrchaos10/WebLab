@@ -1,0 +1,11 @@
+div.profile
+{
+	box-sizing:border-box;
+	border:30px solid blue;
+	color:black;
+	font:size:25px;
+	padding-left:30%;
+	padding-right:30%;
+	padding-top:2%;
+	padding:bottom:2%;
+}
