@@ -1,0 +1,6 @@
+{
+"Name":"Fruit Beer Inc.",
+"location":"New York",
+"brow":"function(){return 30;}",
+"employees":[{"firstName":"John","lastName":"Doe"},{"firstName":"Peter","lastName":"Schemichel"},{"firstName":"David","lastName":"DeGea"}] 
+}
