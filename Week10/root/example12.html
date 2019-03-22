@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example12</title>
+</head>
+<body>
+<h2>JQUERY Chaining the rules METHOD</h2>
+<button>Start Animation </button>
+<div style="background:#98bf21;height:100px;width:100px;position:relative;"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="p1" style="background:#555f21;height:100px;width:100px;position:relative;" ></div>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("div").animate({
+   left:'250px',
+   height:'150px',
+   width:'150px'
+});
+$("#p1").css("color","red").slideUp(2000).slideDown(2000);
+});
+});
+</script>
+</body>
+</html>

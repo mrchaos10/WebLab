@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example8</title>
+</head>
+<body>
+<h2>AJAX JSON REQUEST</h2>
+<p><b>Start Typing to show the suggestions</b></p>
+<form>
+FirstName: <input type="text" onkeyup="showHint(this.value)" ></input>
+</form>
+<p><strong>Suggestions: <span id="demo"></span></strong></p>
+<script>
+function showHint(str)
+{
+if(str.length==0)
+{
+document.getElementById("demo").innerHTML="";
+return;
+}
+else
+{
+var xhttp;
+if(window.XMLHttpRequest)
+{
+//for modern browsers with window containers
+xhttp=new XMLHttpRequest();
+
+}
+else
+{
+//for IE browsers without any container
+xhttp=new ActiveXObject("Microsoft.XMLHttp");
+}
+xhttp.onreadystatechange=function(){
+//alert(this.responseText);
+//alert(this.readyState);
+//alert(this.status);
+
+if(this.readyState==4 && this.status==200)
+{
+document.getElementById("demo").innerHTML=this.responseText;
+}
+};
+//asynchronus true
+xhttp.open("GET","getHint.asp?q="+str,true);
+xhttp.send();
+}
+}
+</script>
+</body>
+</html>

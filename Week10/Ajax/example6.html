@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Example 6
+</title>
+</head>
+<body>
+<h2>My CD Collection:</h2>
+
+<button type="button" onclick="loadXMLDoc()">
+Get my CD collection</button>
+
+<p id="demo"></p>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "cd_catalog.xml", true);
+  xmlhttp.send();
+}
+
+function myFunction(xml) {
+  var x, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "<table border=\"1px solid black\"><tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
+  x = xmlDoc.getElementsByTagName("cd");
+  
+  for (i = 0; i< x.length; i++) {
+    txt +="<tr><td>"+ x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</td><td>";
+    txt += x[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue + "</td><td>";
+    txt += x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue + "</td><td>";
+    txt += x[i].getElementsByTagName("company")[0].childNodes[0].nodeValue + "</td><td>";
+    txt += x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "</td><td>";
+    txt += x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue + "</td></tr>";
+  
+  }
+  txt+="</table>";
+  
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+

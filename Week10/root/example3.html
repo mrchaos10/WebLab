@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example3</title>
+</head>
+<body>
+<h2>STRING TO JSON</h2>
+<p id="demo"></p>
+<script>
+var text='{"employees":[{"firstName":"John","lastName":"Doe"},{"firstName":"Anna","lastName":"Smith"},{"firstName":"Varadha","lastName":"Rajan"}],"location":"New York","Name":"FruitBeer INC.,","brow":"function(){return 30;}"}';
+var jobj=JSON.parse(text);
+alert(jobj);
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML+=jobj.Name;
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML+=jobj.location;
+document.getElementById("demo").innerHTML+="<br/>";
+jobj.brow=eval("("+jobj.brow+")");
+//document.getElementById("demo").innerHTML+=
+document.getElementById("demo").innerHTML+=jobj.brow;
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML+=jobj.employees[0].firstName+" "+jobj.employees[0].lastName;
+document.getElementById("demo").innerHTML+=jobj.employees[1].firstName+" "+jobj.employees[1].lastName;
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML+=jobj.employees[2].firstName+" "+jobj.employees[2].lastName;
+
+</script>
+</body>
+</html>

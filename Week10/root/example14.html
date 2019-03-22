@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example14</title>
+</head>
+<body>
+<h2>JQUERY GET METHOD</h2>
+<p id="demo"></p>
+<button>Click me to get the text from demo text </button>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$.get("demo_text.txt",function(data,status){
+alert("Data in the file:"+data+"\n Status:"+status);
+});
+});
+});
+</script>
+</body>
+</html>

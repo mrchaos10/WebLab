@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example2</title>
+</head>
+<body>
+<h2>JSON from OBJECT</h2>
+<p id="demo"></p>
+<script>
+var text={employees:[{firstName:"John",lastName:"Doe"},{firstName:"Anna",lastName:"Smith"},{firstName:"Varadha",lastName:"Rajan"}]};
+//alert(text);
+var obj=JSON.stringify(text);
+var jobj=JSON.parse(obj);
+alert(obj);
+alert(jobj);
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML=jobj.employees[0].firstName+" "+jobj.employees[0].lastName;
+document.getElementById("demo").innerHTML+=jobj.employees[1].firstName+" "+jobj.employees[1].lastName;
+document.getElementById("demo").innerHTML+="<br/>";
+document.getElementById("demo").innerHTML+=jobj.employees[2].firstName+" "+jobj.employees[2].lastName;
+
+</script>
+</body>
+</html>

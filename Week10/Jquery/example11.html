@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example10</title>
+</head>
+<body>
+<h2>JQUERY Chaining the rules METHOD</h2>
+<button>Click to FadeToggle</button>
+<div id="div1 "style="background:#98bf21;height:100px;width:100px;position:relative;"></div>
+<div id="div2" style="background:#38bf21;height:100px;width:100px;position:relative;" ></div>
+<div id="div2" style="background:#555f21;height:100px;width:100px;position:relative;" ></div>
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#div1").fadeToggle();
+$("#div2").fadeToggle("slow");
+$("#div3").fadeToggle(3000);
+});
+});
+</script>
+</body>
+</html>

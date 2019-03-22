@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example13</title>
+</head>
+<body>
+<h2>JQUERY POST METHOD</h2>
+<p id="demo"></p>
+Enter the name to be searched for:<input type="text" id="txtHint"></input>
+<button>Click me to post the text to getHint php </button>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#txtHint").keyup(function(){
+$.get("getHint.php?q="+document.getElementById("txtHint").value,function(data,status){
+alert("Data from the php:"+data+"\n Status:"+status);
+});
+});
+});
+</script>
+</body>
+</html>
